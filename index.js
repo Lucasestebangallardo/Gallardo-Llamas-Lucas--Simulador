@@ -1,8 +1,23 @@
+function dolar(){
+let dolares, cambio, calculo;
 
-  let dolares = prompt("Ingrese la cantidad de dolares");
-  let cambio = prompt("Ingrese el tipo de cambio");
-  let calculo = dolares * cambio;
+dolares;
+do{
+   dolares = parseInt(prompt("Ingrese la cantidad de dolares:"));
+}while(isNaN(dolares));
 
-  alert("Tus " + dolares + " dolares equivalen a " + calculo + " pesos ");
+  alert ("Ingrese el tipo de cambio del dolar");
+cambio = prompt("1- Dolar oficial 2- Dolar Blue");
+if (cambio ==1) {
+  calculo = dolares * 145 
+  alert("El precio al dolar oficial actual es de " + calculo);
+}else if(cambio ==2) {
+  calculo = dolares *280
+  alert("El precio al dolar oficial actual es de " + calculo);
+}
 
-  document.write("<p> Dolares: $"+ dolares +"</p>" + "<p> Tipo de cambio: "+ cambio  +"</p>" + "<p> Resultado: " + calculo + " ARS</p>" )
+
+document.write("<p> Dolares: $"+ dolares +"</p>" +"<p> Resultado: " + calculo + " ARS</p>" )
+}
+
+dolar();
